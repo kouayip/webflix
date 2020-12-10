@@ -1,0 +1,66 @@
+@import "./reset";
+@import "./vars";
+@import "./base";
+@import "./utils";
+@import "./classes";
+
+header {
+  height: 8rem;
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  .logo-brand {
+    width: 30px;
+  }
+
+  .nav {
+    &-item {
+      margin-left: 3rem;
+    }
+  }
+}
+
+.hero {
+  top: 0;
+  background: var(--background-banner);
+  height: 586px;
+  width: 70vw;
+  border-top-right-radius: 480px;
+  border-bottom-right-radius: 480px;
+  border-bottom-left-radius: 500px;
+
+  &::after {
+    z-index: -1;
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+  }
+
+  .banner {
+    position: relative;
+    &-card {
+      font-size: 1.6rem;
+      position: absolute;
+      right: -20rem;
+      background: var(--white);
+      padding: 3rem 4rem;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+      border-top-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+      border-bottom-left-radius: 80px;
+    }
+
+    &-desc {
+      font-size: 2.2rem;
+    }
+  }
+}

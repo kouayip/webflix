@@ -1,0 +1,116 @@
+.container {
+  padding: 0 4rem;
+  max-width: 1640px;
+  margin: auto;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  border-radius: 2.2rem;
+  &-primary {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  &-pink {
+    background-color: var(--pink);
+    color: var(--white);
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-1 {
+    flex: 1;
+  }
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.align-ctr {
+  align-items: center;
+}
+
+.mg {
+  &-auto {
+    margin: auto;
+  }
+
+  @for $var from 0 to 5 {
+    &-lt-#{$var} {
+      margin-left: #{$var}rem;
+    }
+    &-tp-#{$var} {
+      margin-top: #{$var}rem;
+    }
+  }
+}
+
+//? width
+.w-100 {
+  width: 100%;
+}
+
+//? height
+.h-100 {
+  height: 100%;
+}
+
+//? position
+.p {
+  &-absolute {
+    position: absolute;
+  }
+  &-relative {
+    position: relative;
+  }
+}
+
+//? pisplay
+.d {
+  &-inline-block {
+    display: inline-block;
+  }
+}
+
+.c {
+  &-white {
+    color: var(--white);
+  }
+}
+
+.card {
+}
+
+//? Ul list
+.list {
+  padding: 1rem;
+  &-item {
+    padding-bottom: 2rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+//? text
+.txt {
+  &-regular {
+    font-weight: normal;
+  }
+  &-bold {
+    font-weight: bold;
+  }
+  &-light {
+    font-weight: lighter;
+  }
+  &-color {
+    &-primary {
+      color: var(--primary);
+    }
+  }
+}
