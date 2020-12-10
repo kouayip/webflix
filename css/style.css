@@ -16,6 +16,7 @@
   --pink: #ff6699;
   --background-banner: #030077;
   --background: #fafbfe;
+  --box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
 }
 
 html {
@@ -53,15 +54,29 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button,
+input {
+  outline: none;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
 .container {
-  padding: 0 4rem;
+  padding: 0 2rem;
   max-width: 1640px;
   margin: auto;
 }
 
 .btn {
   padding: 1rem 2.5rem;
-  border-radius: 4px;
   border-radius: 2.2rem;
 }
 
@@ -73,6 +88,22 @@ a {
 .btn-pink {
   background-color: var(--pink);
   color: var(--white);
+}
+
+.btn-pink {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.btn-search {
+  padding: 1.5rem;
+  border-radius: 4px;
+  background-color: var(--white);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .flex {
@@ -232,7 +263,7 @@ header .nav-item {
   border-radius: 50%;
   position: absolute;
   bottom: 50px;
-  left: 70px;
+  left: 80px;
 }
 
 .hero .banner {
@@ -245,14 +276,31 @@ header .nav-item {
   right: -20rem;
   background: var(--white);
   padding: 3rem 4rem;
-  -webkit-box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
   border-top-left-radius: 80px;
   border-bottom-right-radius: 80px;
   border-bottom-left-radius: 80px;
 }
 
+.hero .banner-card::after {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 100%;
+  background: url("../assets/images/banner-shapes.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: -160px;
+}
+
 .hero .banner-desc {
   font-size: 2.2rem;
+}
+
+.hero .banner-shapes {
+  position: absolute;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */

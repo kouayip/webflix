@@ -42,7 +42,7 @@ header {
     border-radius: 50%;
     position: absolute;
     bottom: 50px;
-    left: 70px;
+    left: 80px;
   }
 
   .banner {
@@ -53,14 +53,31 @@ header {
       right: -20rem;
       background: var(--white);
       padding: 3rem 4rem;
-      box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--box-shadow);
       border-top-left-radius: 80px;
       border-bottom-right-radius: 80px;
       border-bottom-left-radius: 80px;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100px;
+        height: 100%;
+        background: url("../assets/images/banner-shapes.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        right: -160px;
+      }
     }
 
     &-desc {
       font-size: 2.2rem;
+    }
+
+    &-shapes {
+      position: absolute;
+      right: 0;
     }
   }
 }
