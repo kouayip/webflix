@@ -69,6 +69,17 @@ header {
         top: 50%;
         right: -160px;
       }
+
+      .list-item.line {
+        &::after {
+          content: "";
+          height: 1px;
+          width: 22px;
+          display: inline-block;
+          margin-left: 2rem;
+          background: var(--primary);
+        }
+      }
     }
 
     &-desc {
