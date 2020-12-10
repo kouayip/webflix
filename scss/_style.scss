@@ -25,6 +25,7 @@ header {
 
 .hero {
   background: var(--background-banner);
+  position: relative;
   height: 586px;
   width: 70vw;
   border-top-right-radius: 480px;
@@ -40,8 +41,8 @@ header {
     background: var(--primary);
     border-radius: 50%;
     position: absolute;
-    bottom: 50px;
-    left: 80px;
+    bottom: 40px;
+    left: 90px;
   }
 
   .banner {
@@ -77,6 +78,43 @@ header {
     &-shapes {
       position: absolute;
       right: 0;
+    }
+  }
+}
+
+//? About section
+.about {
+  margin-top: 8rem;
+  width: 80%;
+  background: var(--white);
+  padding: 6rem 4rem;
+  box-shadow: var(--box-shadow);
+  border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+
+  .about-comment {
+    &::before {
+      content: "“";
+      font-size: 10rem;
+      display: block;
+      line-height: 0;
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+      font-family: var(--font-family-volkhov);
+      color: var(--text-hint);
+      opacity: 20%;
+    }
+    p {
+      font-size: 1.6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+    a {
+      font-size: 1.2rem;
     }
   }
 }
